@@ -3,527 +3,463 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solo Sip'nSaj — Fresh Saj • Coffee • Drinks • Baguette | Verdun, Beirut</title>
-<meta name="description" content="Solo Sip'nSaj, Verdun Main Street, Beirut. Fresh saj with daily dough, 0% oil & 0% sugar. Specialty coffee, fresh juices & baguette. Open daily 7AM–9PM. From Saj to Sip… it's a Solo Trip.">
-<meta property="og:title" content="Solo Sip'nSaj — From Saj to Sip… it's a Solo Trip">
-<meta property="og:description" content="Fresh Saj • Coffee • Drinks • Baguette — Verdun Main Street, Beirut. Daily fresh dough, no oil, no sugar. Open 7AM–9PM daily.">
-<meta property="og:image" content="https://jadkhaddag-beep.github.io/solo-sipnsaj/images/post-01-pizza-on-saj.jpg">
+<title>Solo Sip'n Saj — Fresh Saj • Coffee • Drinks • Baguette | Verdun</title>
+<meta name="description" content="Solo Sip'n Saj — daily fresh dough, no oil, no sugar. From Saj to Sip… it's a Solo Trip. Fresh Saj, coffee, drinks & baguette in Verdun, Beirut.">
+<meta property="og:title" content="Solo Sip'n Saj — Fresh Saj • Coffee • Drinks • Baguette">
+<meta property="og:description" content="From Saj to Sip… it's a Solo Trip. Daily fresh dough | No oil, no sugar. 📍 Verdun, Beirut">
 <meta property="og:type" content="website">
-<link rel="icon" type="image/jpeg" href="images/profile-pic.jpg">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Outfit:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#faf6ee;
-    --cream-2:#f3ecdd;
-    --ink:#191813;
-    --ink-soft:#4d4a40;
-    --green:#1f5b3f;
-    --green-deep:#143d2a;
-    --green-soft:#e5efe6;
-    --gold:#e9a13b;
-    --gold-soft:#f7e3c0;
-    --line:rgba(25,24,19,.12);
-    --shadow:0 24px 60px -24px rgba(25,24,19,.35);
-    --radius:22px;
+    --cream:#faf6ef;
+    --cream-2:#f3ecdf;
+    --ink:#221a12;
+    --ink-2:#5c5143;
+    --clay:#b0542a;
+    --clay-dark:#8f3f1d;
+    --gold:#c99a52;
+    --line:#e6dcc9;
+    --shadow:0 20px 50px -20px rgba(34,26,18,.25);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
-    font-family:'Outfit',sans-serif;
+    font-family:'Manrope',sans-serif;
     background:var(--cream);
     color:var(--ink);
     line-height:1.6;
-    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
-  .serif{font-family:'Fraunces',serif}
-  .arabic{font-family:'Noto Kufi Arabic',sans-serif;direction:rtl}
+  h1,h2,h3,.serif{font-family:'Fraunces',serif}
   img{display:block;max-width:100%}
   a{color:inherit;text-decoration:none}
-  .container{width:min(1180px,92%);margin-inline:auto}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px}
+  .section{padding:96px 0}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--clay);margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:34px;height:2px;background:var(--gold)}
+  h2.title{font-size:clamp(30px,4.2vw,48px);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+  .lead{color:var(--ink-2);font-size:clamp(15px,1.4vw,17px);max-width:560px;margin-top:16px}
 
   /* ---------- NAV ---------- */
-  .nav{
-    position:fixed;inset:0 0 auto 0;z-index:50;
-    background:rgba(250,246,238,.85);
-    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--line);
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:background .35s, box-shadow .35s, padding .35s;
+    padding:18px 0;
   }
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+  header.nav.scrolled{background:rgba(250,246,239,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:10px 0}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
   .brand{display:flex;align-items:center;gap:12px}
-  .brand-logo{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
-  .brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.35rem;letter-spacing:.02em}
-  .brand-name span{color:var(--green)}
-  .nav-links{display:flex;align-items:center;gap:30px;font-weight:500;font-size:.95rem}
-  .nav-links a{color:var(--ink-soft);transition:color .2s}
-  .nav-links a:hover{color:var(--green)}
-  .nav-cta{
-    background:var(--green);color:#fff;padding:10px 22px;border-radius:999px;
-    font-weight:600;font-size:.92rem;transition:background .2s,transform .2s;
+  .brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+  .brand .b-name{font-family:'Fraunces',serif;font-weight:700;font-size:19px;line-height:1.1}
+  .brand .b-sub{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--clay)}
+  nav.links{display:flex;align-items:center;gap:34px}
+  nav.links a{font-size:14px;font-weight:600;color:var(--ink-2);transition:color .2s;position:relative}
+  nav.links a:hover{color:var(--clay)}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 28px;border-radius:999px;font-weight:700;font-size:14px;
+    transition:transform .2s, box-shadow .2s, background .2s;cursor:pointer;border:none;
   }
-  .nav-cta:hover{background:var(--green-deep);transform:translateY(-1px)}
-  .nav-burger{display:none;background:none;border:0;cursor:pointer;font-size:1.6rem;color:var(--ink)}
+  .btn-primary{background:var(--clay);color:#fff;box-shadow:0 10px 24px -10px rgba(176,84,42,.55)}
+  .btn-primary:hover{background:var(--clay-dark);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink);padding:12px 26px}
+  .btn-ghost:hover{background:var(--ink);color:var(--cream)}
+  .nav-cta{display:flex;gap:12px}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+  .burger span{display:block;width:24px;height:2.5px;background:var(--ink);margin:5px 0;border-radius:2px;transition:.3s}
 
   /* ---------- HERO ---------- */
   .hero{
-    position:relative;min-height:100svh;display:flex;align-items:center;
-    padding:130px 0 90px;overflow:hidden;
-    background:var(--green-deep);
+    min-height:100vh;display:flex;align-items:center;position:relative;
+    padding:140px 0 90px;overflow:hidden;
+    background:radial-gradient(1200px 600px at 85% 10%, #f7e9d3 0%, transparent 60%), var(--cream);
   }
-  .hero-bg{
-    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;
-  }
-  .hero::after{
-    content:"";position:absolute;inset:0;
-    background:linear-gradient(180deg,rgba(20,35,25,.55) 0%,rgba(20,35,25,.35) 40%,rgba(20,35,25,.82) 100%);
-  }
-  .hero-content{position:relative;z-index:2;color:#fff;max-width:760px}
-  .hero-badge{
-    display:inline-flex;align-items:center;gap:8px;
-    background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);
-    backdrop-filter:blur(6px);padding:8px 16px;border-radius:999px;
-    font-size:.85rem;font-weight:500;letter-spacing:.04em;margin-bottom:26px;
-  }
-  .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 1.8s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
   .hero h1{
-    font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.6rem,6vw,4.6rem);
-    line-height:1.06;letter-spacing:-.01em;margin-bottom:22px;
+    font-size:clamp(42px,6vw,78px);font-weight:600;line-height:1.04;letter-spacing:-.02em;
   }
-  .hero h1 em{font-style:italic;color:var(--gold)}
-  .hero p.lede{
-    font-size:clamp(1.05rem,1.6vw,1.25rem);font-weight:300;color:rgba(255,255,255,.9);
-    max-width:600px;margin-bottom:34px;
+  .hero h1 em{font-style:italic;color:var(--clay)}
+  .hero .tagline{
+    font-family:'Fraunces',serif;font-style:italic;font-size:clamp(17px,1.6vw,21px);
+    color:var(--ink-2);margin:22px 0 10px;
   }
-  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:44px}
-  .btn{
-    display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;
-    font-weight:600;font-size:1rem;transition:transform .2s,box-shadow .2s,background .2s;
+  .hero .tagline b{color:var(--clay-dark)}
+  .hero .desc{color:var(--ink-2);max-width:480px;margin-top:8px}
+  .hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+  .hero-meta{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap}
+  .hero-meta .m-item{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:var(--ink-2)}
+  .hero-meta .m-item .ic{width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:16px}
+  .hero-photo{position:relative}
+  .hero-photo .frame{
+    position:relative;border-radius:28px;overflow:hidden;
+    box-shadow:var(--shadow);
   }
-  .btn-primary{background:var(--gold);color:var(--ink);box-shadow:0 12px 30px -10px rgba(233,161,59,.6)}
-  .btn-primary:hover{transform:translateY(-2px)}
-  .btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(6px)}
-  .btn-ghost:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
-  .btn-green{background:var(--green);color:#fff}
-  .btn-green:hover{background:var(--green-deep);transform:translateY(-2px)}
-  .hero-meta{display:flex;flex-wrap:wrap;gap:26px;color:rgba(255,255,255,.85);font-size:.95rem}
-  .hero-meta b{display:block;color:#fff;font-weight:600}
-  .hero-meta div{display:flex;flex-direction:column;gap:2px}
+  .hero-photo .frame img{width:100%;height:640px;object-fit:cover;transform:scale(1.01)}
+  .hero-photo .badge{
+    position:absolute;left:-22px;bottom:36px;background:var(--ink);color:var(--cream);
+    border-radius:16px;padding:16px 22px;display:flex;align-items:center;gap:14px;
+    box-shadow:var(--shadow);
+  }
+  .hero-photo .badge .big{font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:var(--gold)}
+  .hero-photo .badge .lbl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#cbbfa8;line-height:1.4}
+  .hero-photo .stamp{
+    position:absolute;top:-26px;right:-14px;width:104px;height:104px;
+    background:var(--clay);color:#fff;border-radius:50%;
+    display:grid;place-items:center;text-align:center;
+    font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;line-height:1.35;
+    transform:rotate(10deg);box-shadow:var(--shadow);
+  }
 
   /* ---------- MARQUEE ---------- */
   .marquee{
-    background:var(--gold);color:var(--ink);overflow:hidden;padding:14px 0;
-    border-block:3px solid var(--ink);
+    background:var(--ink);color:var(--cream);padding:16px 0;overflow:hidden;
+    white-space:nowrap;border-top:1px solid rgba(255,255,255,.08);
   }
-  .marquee-track{display:flex;gap:56px;white-space:nowrap;animation:scroll 26s linear infinite;width:max-content}
-  .marquee-track span{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.95rem;display:flex;align-items:center;gap:56px}
-  .marquee-track span::after{content:"✦";font-size:1rem}
-  @keyframes scroll{to{transform:translateX(-50%)}}
-
-  /* ---------- SECTION SHELL ---------- */
-  section{padding:100px 0}
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:10px;
-    color:var(--green);font-weight:600;letter-spacing:.22em;text-transform:uppercase;
-    font-size:.78rem;margin-bottom:16px;
+  .marquee .track{display:inline-block;animation:scroll 30s linear infinite}
+  .marquee span{
+    font-family:'Fraunces',serif;font-style:italic;font-size:16px;
+    margin:0 26px;display:inline-block;
   }
-  .eyebrow::before{content:"";width:34px;height:2px;background:var(--gold)}
-  .sec-title{
-    font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2rem,4vw,3rem);
-    line-height:1.12;letter-spacing:-.01em;margin-bottom:18px;
-  }
-  .sec-title em{font-style:italic;color:var(--green)}
-  .sec-sub{color:var(--ink-soft);max-width:640px;font-size:1.05rem;font-weight:300}
-  .sec-head{margin-bottom:56px}
+  .marquee .sep{color:var(--gold)}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* ---------- ABOUT ---------- */
-  .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
-  .about-media{position:relative}
-  .about-photo{
-    width:100%;aspect-ratio:1/1.05;object-fit:cover;border-radius:var(--radius);
-    box-shadow:var(--shadow);border:6px solid #fff;
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .about-photos{position:relative;min-height:520px}
+  .about-photos .p1{
+    position:absolute;left:0;top:0;width:68%;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);
   }
-  .about-photo-frame{
-    position:absolute;inset:-18px auto auto -18px;width:70%;height:70%;
-    border:2px solid var(--gold);border-radius:var(--radius);z-index:-1;
+  .about-photos .p1 img{height:380px;width:100%;object-fit:cover}
+  .about-photos .p2{
+    position:absolute;right:0;bottom:0;width:52%;border-radius:24px;overflow:hidden;
+    border:8px solid var(--cream);box-shadow:var(--shadow);
   }
-  .about-badge{
-    position:absolute;right:-14px;bottom:34px;background:var(--green);color:#fff;
-    padding:16px 22px;border-radius:16px;box-shadow:var(--shadow);text-align:center;
+  .about-photos .p2 img{height:300px;width:100%;object-fit:cover}
+  .about-photos .cap{
+    position:absolute;left:26px;bottom:26px;background:rgba(34,26,18,.85);color:var(--cream);
+    border-radius:12px;padding:10px 16px;font-size:12px;font-weight:700;letter-spacing:.06em;
   }
-  .about-badge b{font-family:'Fraunces',serif;font-size:1.7rem;display:block;line-height:1}
-  .about-badge small{font-size:.75rem;opacity:.85;letter-spacing:.06em}
-  .about-txt p{color:var(--ink-soft);font-weight:300;font-size:1.06rem;margin-bottom:16px}
-  .about-txt .arabic{color:var(--green);font-weight:600;margin:10px 0 22px;font-size:1.02rem}
-  .feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
-  .feat{
-    background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;
-    display:flex;gap:14px;align-items:flex-start;transition:transform .2s,box-shadow .2s;
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+  .pillar{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 16px}
+  .pillar .p-ic{font-size:22px;margin-bottom:8px}
+  .pillar .p-t{font-weight:800;font-size:13.5px}
+  .pillar .p-d{font-size:11.5px;color:var(--ink-2);margin-top:4px;line-height:1.45}
+  .about-note{
+    margin-top:30px;padding:20px 24px;background:var(--cream-2);border-left:3px solid var(--clay);
+    border-radius:0 14px 14px 0;font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:var(--ink-2);
   }
-  .feat:hover{transform:translateY(-3px);box-shadow:0 14px 34px -18px rgba(25,24,19,.25)}
-  .feat-ico{
-    width:42px;height:42px;border-radius:12px;flex-shrink:0;
-    display:grid;place-items:center;font-size:1.25rem;background:var(--green-soft);
-  }
-  .feat b{display:block;font-size:.98rem;margin-bottom:2px}
-  .feat small{color:var(--ink-soft);font-weight:300;font-size:.86rem}
 
   /* ---------- MENU ---------- */
-  .menu-section{background:var(--cream-2)}
-  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-  .menu-card{
-    background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
-    transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;
+  .menu{background:var(--cream-2)}
+  .menu-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+  .menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .m-card{
+    background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line);
+    transition:transform .3s, box-shadow .3s;
   }
-  .menu-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-  .menu-card-img{aspect-ratio:4/3;object-fit:cover;width:100%}
-  .menu-card-body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
-  .menu-card h3{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600}
-  .menu-card p{color:var(--ink-soft);font-weight:300;font-size:.95rem;flex:1}
-  .menu-price{font-weight:700;color:var(--green);font-size:1.05rem}
-  .menu-tag{
-    align-self:flex-start;background:var(--gold-soft);color:#8a5a14;
-    font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-    padding:5px 12px;border-radius:999px;
+  .m-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .m-card .ph{height:200px;overflow:hidden;position:relative}
+  .m-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .m-card:hover .ph img{transform:scale(1.07)}
+  .m-card .ph .ph-badge{
+    position:absolute;top:14px;left:14px;background:rgba(250,246,239,.94);color:var(--clay-dark);
+    font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+    padding:6px 12px;border-radius:999px;
   }
-  .menu-note{
-    margin-top:34px;text-align:center;color:var(--ink-soft);font-weight:300;font-size:.95rem;
+  .m-card .bd{padding:22px 22px 24px}
+  .m-card h3{font-size:19px;font-weight:700;margin-bottom:8px}
+  .m-card p{font-size:13px;color:var(--ink-2)}
+  .m-card .tags{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+  .m-card .tags span{
+    font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    background:var(--cream-2);color:var(--ink-2);padding:5px 10px;border-radius:999px;
   }
-  .menu-note a{color:var(--green);font-weight:600;text-decoration:underline}
-
-  /* ---------- HIGHLIGHTS ---------- */
-  .hl-row{display:flex;flex-wrap:wrap;gap:34px;justify-content:center}
-  .hl-item{text-align:center;width:112px}
-  .hl-ring{
-    width:112px;height:112px;border-radius:50%;padding:4px;margin-bottom:12px;
-    background:conic-gradient(var(--gold) 0 30%,var(--green) 30% 55%,var(--gold-soft) 55% 100%);
-    transition:transform .25s;
-  }
-  .hl-item:hover .hl-ring{transform:scale(1.06)}
-  .hl-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--cream)}
-  .hl-item small{font-weight:600;font-size:.86rem;color:var(--ink-soft);display:block;line-height:1.3}
-  .hl-item a:hover small{color:var(--green)}
 
   /* ---------- GALLERY ---------- */
-  .gallery-section{background:var(--cream)}
-  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .g-card{
-    position:relative;border-radius:16px;overflow:hidden;cursor:pointer;
-    aspect-ratio:4/5;background:var(--green-deep);border:1px solid var(--line);
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+  .g-item{position:relative;border-radius:20px;overflow:hidden;cursor:pointer;aspect-ratio:9/11}
+  .g-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .g-item:hover img{transform:scale(1.06)}
+  .g-item::after{
+    content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(34,26,18,.45), transparent 45%);
+    opacity:0;transition:opacity .35s;
   }
-  .g-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-  .g-card:hover img{transform:scale(1.07)}
-  .g-card .overlay{
-    position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
-    padding:20px;background:linear-gradient(180deg,transparent 35%,rgba(15,20,16,.88) 100%);
-    opacity:0;transition:opacity .3s;color:#fff;
+  .g-item:hover::after{opacity:1}
+  .g-item .g-lbl{
+    position:absolute;left:16px;bottom:14px;color:#fff;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+    opacity:0;transform:translateY(8px);transition:.35s;z-index:2;
   }
-  .g-card:hover .overlay{opacity:1}
-  .g-card .overlay p{font-size:.88rem;font-weight:300;line-height:1.45;margin-bottom:8px}
-  .g-card .overlay small{font-size:.76rem;opacity:.75;letter-spacing:.05em}
-  .g-card .ig-ico{
-    position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;
-    background:rgba(255,255,255,.9);display:grid;place-items:center;font-size:1rem;
-    opacity:0;transition:opacity .3s;
+  .g-item:hover .g-lbl{opacity:1;transform:translateY(0)}
+  .g-ig{
+    display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:var(--ink-2);
   }
-  .g-card:hover .ig-ico{opacity:1}
 
-  /* ---------- LIGHTBOX ---------- */
-  .lightbox{
-    position:fixed;inset:0;z-index:100;background:rgba(12,14,12,.92);
-    display:none;align-items:center;justify-content:center;padding:4vw;
-    backdrop-filter:blur(6px);
+  /* ---------- LOCATION ---------- */
+  .loc{background:var(--ink);color:var(--cream)}
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .loc h2.title{color:#fff}
+  .loc .lead{color:#cbbfa8}
+  .loc-list{margin-top:34px;display:grid;gap:18px}
+  .loc-item{display:flex;gap:16px;align-items:flex-start}
+  .loc-item .ic{
+    flex:0 0 46px;height:46px;border-radius:14px;background:rgba(201,154,82,.14);border:1px solid rgba(201,154,82,.3);
+    display:grid;place-items:center;font-size:19px;
   }
-  .lightbox.open{display:flex}
-  .lb-card{
-    background:#fff;border-radius:20px;max-width:920px;width:100%;
-    display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden;max-height:86vh;
+  .loc-item .t{font-weight:800;font-size:15px}
+  .loc-item .d{font-size:13.5px;color:#cbbfa8;margin-top:2px}
+  .loc-item .d a{color:var(--gold);font-weight:700}
+  .loc-card{
+    background:var(--cream);color:var(--ink);border-radius:24px;padding:40px;position:relative;overflow:hidden;
   }
-  .lb-img{object-fit:cover;width:100%;height:100%;max-height:86vh}
-  .lb-side{padding:30px 30px 24px;display:flex;flex-direction:column;overflow-y:auto}
-  .lb-side h3{font-family:'Fraunces',serif;font-size:1.35rem;margin-bottom:12px}
-  .lb-side .lb-cap{color:var(--ink-soft);font-weight:300;font-size:.95rem;flex:1;white-space:pre-line}
-  .lb-side .lb-meta{margin-top:16px;font-size:.8rem;color:var(--ink-soft)}
-  .lb-side a.lb-ig{
-    display:inline-flex;align-items:center;gap:8px;margin-top:18px;
-    background:var(--green);color:#fff;padding:11px 20px;border-radius:999px;font-weight:600;font-size:.88rem;
-  }
-  .lb-side a.lb-ig:hover{background:var(--green-deep)}
-  .lb-close{
-    position:fixed;top:24px;right:28px;background:rgba(255,255,255,.15);color:#fff;border:0;
-    width:46px;height:46px;border-radius:50%;font-size:1.3rem;cursor:pointer;transition:background .2s;
-  }
-  .lb-close:hover{background:rgba(255,255,255,.3)}
-  @media(max-width:760px){.lb-card{grid-template-columns:1fr}.lb-img{max-height:42vh}}
-
-  /* ---------- VISIT ---------- */
-  .visit-section{background:var(--green-deep);color:#fff}
-  .visit-section .eyebrow{color:var(--gold)}
-  .visit-section .sec-title em{color:var(--gold)}
-  .visit-section .sec-sub{color:rgba(255,255,255,.75)}
-  .visit-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:stretch}
-  .visit-info{display:grid;gap:18px}
-  .v-card{
-    display:flex;gap:18px;align-items:flex-start;background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:22px 24px;
-  }
-  .v-ico{
-    width:48px;height:48px;border-radius:14px;background:var(--gold);color:var(--ink);
-    display:grid;place-items:center;font-size:1.3rem;flex-shrink:0;
-  }
-  .v-card h4{font-weight:600;margin-bottom:4px;font-size:1.02rem}
-  .v-card p{color:rgba(255,255,255,.78);font-weight:300;font-size:.95rem}
-  .v-card a{color:var(--gold);font-weight:600}
-  .v-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-  .map-frame{
-    border-radius:var(--radius);overflow:hidden;min-height:380px;border:1px solid rgba(255,255,255,.2);
-    filter:grayscale(.3) contrast(1.02);
-  }
-  .map-frame iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+  .loc-card::before{content:"";position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:var(--cream-2)}
+  .loc-card h3{font-size:24px;font-weight:700;margin-bottom:6px}
+  .loc-card .sub{font-size:13px;color:var(--ink-2);margin-bottom:28px}
+  .hours{display:grid;gap:10px;margin-bottom:30px}
+  .hours .h-row{display:flex;justify-content:space-between;font-size:14px;padding-bottom:10px;border-bottom:1px dashed var(--line)}
+  .hours .h-row b{font-weight:800}
+  .loc-card .btn{width:100%}
 
   /* ---------- FOOTER ---------- */
-  footer{background:var(--ink);color:rgba(255,255,255,.75);padding:56px 0 40px;font-size:.92rem}
-  .foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:40px}
-  .foot-brand{max-width:340px}
-  .foot-brand .brand-name{color:#fff;font-size:1.5rem;margin-bottom:10px}
-  .foot-brand p{font-weight:300;font-size:.9rem}
-  .foot-col h5{color:#fff;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px}
-  .foot-col a{display:block;margin-bottom:8px;transition:color .2s}
-  .foot-col a:hover{color:var(--gold)}
-  .foot-bottom{
-    border-top:1px solid rgba(255,255,255,.14);padding-top:24px;
-    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:rgba(255,255,255,.5);
-  }
+  footer{background:#171008;color:#cbbfa8;padding:48px 0 36px}
+  .foot-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .foot-brand{display:flex;align-items:center;gap:12px}
+  .foot-brand img{width:38px;height:38px;border-radius:50%;border:2px solid var(--gold)}
+  .foot-brand .n{font-family:'Fraunces',serif;font-weight:700;font-size:17px;color:#fff}
+  .foot-tag{font-size:12px;font-style:italic;font-family:'Fraunces',serif}
+  .foot-links{display:flex;gap:22px;font-size:13px;font-weight:600}
+  .foot-links a:hover{color:#fff}
+  .foot-copy{text-align:center;margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);font-size:12px}
 
-  /* ---------- REVEAL ---------- */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.visible{opacity:1;transform:none}
+  /* ---------- LIGHTBOX ---------- */
+  .lb{position:fixed;inset:0;background:rgba(20,13,7,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:40px}
+  .lb.open{display:flex}
+  .lb img{max-width:min(92vw,860px);max-height:88vh;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .lb .close{position:absolute;top:26px;right:32px;background:none;border:none;color:#fff;font-size:38px;cursor:pointer;line-height:1}
+  .lb .cap{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
 
   /* ---------- RESPONSIVE ---------- */
-  @media(max-width:960px){
-    .about-grid{grid-template-columns:1fr;gap:50px}
+  @media (max-width:1024px){
+    .hero-grid{grid-template-columns:1fr;gap:52px}
+    .hero-photo .frame img{height:480px}
+    .menu-grid{grid-template-columns:repeat(2,1fr)}
     .gallery-grid{grid-template-columns:repeat(2,1fr)}
-    .visit-grid{grid-template-columns:1fr}
-    .nav-links{display:none}
-    .nav-burger{display:block}
+    .about-grid,.loc-grid{grid-template-columns:1fr;gap:52px}
   }
-  @media(max-width:560px){
-    .gallery-grid{grid-template-columns:1fr 1fr;gap:10px}
-    section{padding:74px 0}
-    .feat-grid{grid-template-columns:1fr}
-    .hero-meta{gap:18px}
+  @media (max-width:720px){
+    .section{padding:72px 0}
+    nav.links,.nav-cta .btn-ghost{display:none}
+    .burger{display:block}
+    nav.links.open{
+      display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;
+      background:var(--cream);padding:24px;gap:20px;box-shadow:0 20px 40px rgba(0,0,0,.12);align-items:flex-start;
+    }
+    .menu-grid{grid-template-columns:1fr}
+    .gallery-grid{grid-template-columns:1fr 1fr;gap:12px}
+    .hero-photo .badge{left:12px;bottom:16px;padding:12px 16px}
+    .hero-photo .stamp{width:88px;height:88px;top:-16px;right:-8px}
+    .about-photos{min-height:420px}
+    .pillars{grid-template-columns:1fr 1fr}
+    .loc-card{padding:30px 24px}
   }
 </style>
 </head>
 <body>
 
 <!-- ================= NAV ================= -->
-<nav class="nav">
+<header class="nav" id="nav">
   <div class="container nav-inner">
     <a class="brand" href="#top">
-      <img class="brand-logo" src="images/profile-pic.jpg" alt="Solo Sip'nSaj logo">
-      <span class="brand-name">Solo <span>Sip'nSaj</span></span>
+      <img src="images/logo.png" alt="Solo Sip'n Saj logo">
+      <span>
+        <span class="b-name">Solo Sip'n Saj</span><br>
+        <span class="b-sub">Verdun · Beirut</span>
+      </span>
     </a>
-    <div class="nav-links">
+    <nav class="links" id="menu">
       <a href="#about">Our Story</a>
       <a href="#menu">Menu</a>
-      <a href="#highlights">Highlights</a>
       <a href="#gallery">Gallery</a>
-      <a href="#visit">Visit Us</a>
-    </div>
-    <a class="nav-cta" href="https://wa.me/96176661089?text=Hi%20Solo%20Sip'nSaj!%20I'd%20like%20to%20order%20%E2%9C%A8" target="_blank" rel="noopener">Order Now</a>
-    <button class="nav-burger" aria-label="Menu" onclick="document.getElementById('mobileMenu').style.display='block'">☰</button>
-  </div>
-  <div id="mobileMenu" style="display:none;padding:18px 6%;background:var(--cream);border-top:1px solid var(--line)">
-    <a href="#about" style="display:block;padding:10px 0;font-weight:500" onclick="this.parentElement.style.display='none'">Our Story</a>
-    <a href="#menu" style="display:block;padding:10px 0;font-weight:500" onclick="this.parentElement.style.display='none'">Menu</a>
-    <a href="#highlights" style="display:block;padding:10px 0;font-weight:500" onclick="this.parentElement.style.display='none'">Highlights</a>
-    <a href="#gallery" style="display:block;padding:10px 0;font-weight:500" onclick="this.parentElement.style.display='none'">Gallery</a>
-    <a href="#visit" style="display:block;padding:10px 0;font-weight:500" onclick="this.parentElement.style.display='none'">Visit Us</a>
-  </div>
-</nav>
-
-<!-- ================= HERO ================= -->
-<header class="hero" id="top">
-  <img class="hero-bg" src="images/post-01-pizza-on-saj.jpg" alt="Pizza made on fresh saj at Solo Sip'nSaj">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge"><span class="dot"></span> FRESH SAJ • COFFEE • DRINKS • BAGUETTE — VERDUN, BEIRUT</div>
-      <h1>From <em>Saj</em> to Sip…<br>it’s a <em>Solo</em> Trip.</h1>
-      <p class="lede">Daily fresh dough. No oil. No sugar. Saj, pizza-on-saj, specialty coffee and 100% natural juices — made fresh in front of you at Solo Sip’nSaj, Verdun Main Street.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="https://wa.me/96176661089?text=Hi%20Solo%20Sip'nSaj!%20I'd%20like%20to%20order%20%E2%9C%A8" target="_blank" rel="noopener">🛵 Order on WhatsApp</a>
-        <a class="btn btn-ghost" href="#menu">Explore the Menu</a>
-      </div>
-      <div class="hero-meta">
-        <div><b>Open Daily</b>7:00 AM – 9:00 PM</div>
-        <div><b>📍 Verdun</b>Main St., facing Goodies</div>
-        <div><b>📞 +961 76 661 089</b>Call or WhatsApp</div>
-      </div>
+      <a href="#location">Visit Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://wa.me/96176661089" target="_blank" rel="noopener">Order Now</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Fresh Saj · Coffee · Drinks · Baguette</span>
+      <h1>From Saj to Sip…<br>it's a <em>Solo</em> Trip</h1>
+      <p class="tagline">Daily fresh dough. <b>No oil. No sugar.</b> Just pure taste.</p>
+      <p class="desc">Solo Sip'n Saj is a Verdun favorite — hand-stretched saj on the saj-bird, slow-brewed coffee, fresh juices and crisp baguettes, all made daily in front of you.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://wa.me/96176661089" target="_blank" rel="noopener">Order on WhatsApp</a>
+        <a class="btn btn-ghost" href="#menu">Explore Menu</a>
+      </div>
+      <div class="hero-meta">
+        <div class="m-item"><span class="ic">🫓</span> Fresh saj, daily</div>
+        <div class="m-item"><span class="ic">🚫</span> No oil, no sugar</div>
+        <div class="m-item"><span class="ic">📍</span> Verdun Main Street</div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame">
+        <img src="images/pizza.jpg" alt="Pizza baked the Solo way on saj — crisp, fresh and packed">
+      </div>
+      <div class="badge">
+        <span class="big">100%</span>
+        <span class="lbl">Fresh dough<br>made daily</span>
+      </div>
+      <div class="stamp">Solo<br>Made<br>Daily</div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= MARQUEE ================= -->
 <div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>0% Oil</span><span>0% Sugar</span><span>Fresh Dough Daily</span><span>Made in Front of You</span><span>From Saj to Sip</span><span>Toters Delivery</span><span>0% Oil</span><span>0% Sugar</span><span>Fresh Dough Daily</span><span>Made in Front of You</span><span>From Saj to Sip</span><span>Toters Delivery</span>
+  <div class="track" id="marquee">
+    <span>Fresh Saj <b class="sep">✦</b></span><span>Specialty Coffee <b class="sep">✦</b></span><span>Cold Brews <b class="sep">✦</b></span><span>Fresh Juices <b class="sep">✦</b></span><span>Baguettes <b class="sep">✦</b></span><span>No Oil. No Sugar. <b class="sep">✦</b></span><span>Verdun · Beirut <b class="sep">✦</b></span>
   </div>
 </div>
 
 <!-- ================= ABOUT ================= -->
-<section id="about">
+<section class="section" id="about">
   <div class="container about-grid">
-    <div class="about-media reveal">
-      <div class="about-photo-frame"></div>
-      <img class="about-photo" src="images/post-06-dough-to-wrap.jpg" alt="Fresh saj dough being made at Solo Sip'nSaj">
-      <div class="about-badge"><b>403+</b><small>FOLLOWERS ON INSTAGRAM</small></div>
+    <div class="about-photos">
+      <div class="p1"><img src="images/tortilla.jpg" alt="Fresh tortilla and pie baked at Solo Sip'n Saj"></div>
+      <div class="p2"><img src="images/spaghetti.jpg" alt="Hearty spaghetti dish served at Solo Sip'n Saj"></div>
+      <div class="cap">Made fresh, all day</div>
     </div>
-    <div class="about-txt reveal">
+    <div>
       <span class="eyebrow">Our Story</span>
-      <h2 class="sec-title">Saj the <em>Solo</em> way — clean, fresh & made for you</h2>
-      <p>From the first piece of dough to the last wrap, every saj at Solo Sip’nSaj is stretched fresh in front of you by the Solo crew. No shortcuts, no frozen dough — just warm bread, honest ingredients and a taste that talks for itself.</p>
-      <p class="arabic">من أول فردة عجين… لآخر لفّة — كل صاج منعمله طازة قدّامكن وبإيدين شباب Solo 💚</p>
-      <p>Pair it with an iced latte, a Spanish latte or a glass of juice squeezed right at the counter — because at Solo, healthy never tasted this good.</p>
-      <div class="feat-grid">
-        <div class="feat"><div class="feat-ico">🌱</div><div><b>0% Oil, 0% Sugar</b><small>Clean dough you can feel good about</small></div></div>
-        <div class="feat"><div class="feat-ico">🫓</div><div><b>Fresh Dough Daily</b><small>Made every single morning</small></div></div>
-        <div class="feat"><div class="feat-ico">👨‍🍳</div><div><b>Made in Front of You</b><small>Watched by the Solo crew, live</small></div></div>
-        <div class="feat"><div class="feat-ico">🥤</div><div><b>100% Natural Juices</b><small>No added sugar, no water — ever</small></div></div>
+      <h2 class="title">A little corner of Verdun with a big, honest kitchen</h2>
+      <p class="lead">We started with one idea: real food, made the right way. Every saj is stretched by hand, every dough is mixed fresh each morning, and nothing comes out of a packet. That's the Solo way.</p>
+      <div class="pillars">
+        <div class="pillar"><div class="p-ic">🫓</div><div class="p-t">Hand-stretched</div><div class="p-d">Saj and dough made fresh, every single day</div></div>
+        <div class="pillar"><div class="p-ic">🌿</div><div class="p-t">Clean eating</div><div class="p-d">No oil, no added sugar — just honest ingredients</div></div>
+        <div class="pillar"><div class="p-ic">☕</div><div class="p-t">Coffee & more</div><div class="p-d">From iced lattes to fresh fruit cocktails</div></div>
       </div>
+      <p class="about-note">"From Saj to Sip… it's a Solo Trip." Come once, and you'll get why everyone in Verdun keeps coming back.</p>
     </div>
   </div>
 </section>
 
 <!-- ================= MENU ================= -->
-<section class="menu-section" id="menu">
+<section class="section menu" id="menu">
   <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow">The Menu</span>
-      <h2 class="sec-title">Fresh from the <em>grill</em> & the bar</h2>
-      <p class="sec-sub">Everything we serve is made to order — from our signature saj and pizza-on-saj to cold coffee and juices squeezed while you watch.</p>
+    <div class="menu-head">
+      <div>
+        <span class="eyebrow">What we serve</span>
+        <h2 class="title">The Menu</h2>
+        <p class="lead">Everything below is made in-house, daily. Fresh, fast, and always from scratch.</p>
+      </div>
+      <a class="btn btn-ghost" href="https://wa.me/96176661089?text=Hi%20Solo%20Sip'n%20Saj!%20I'd%20like%20to%20place%20an%20order%20%F0%9F%8D%94" target="_blank" rel="noopener">Order via WhatsApp →</a>
     </div>
     <div class="menu-grid">
-      <div class="menu-card reveal">
-        <img class="menu-card-img" src="images/post-02-saj-different.jpg" alt="Fresh saj">
-        <div class="menu-card-body">
-          <span class="menu-tag">Signature</span>
-          <h3>Fresh Saj & Bread</h3>
-          <p>Our saj is unlike any saj — thin, warm and baked on the dome. With a bread you won’t find anywhere else.</p>
-          <span class="menu-price">Made fresh • Daily dough</span>
+      <div class="m-card">
+        <div class="ph"><span class="ph-badge">Signature</span><img src="images/pizza.jpg" alt="Saj-style pizza — a Solo original"></div>
+        <div class="bd">
+          <h3>Saj Pizza</h3>
+          <p>Our signature take — pizza toppings on fresh saj dough. Crisp, light and dangerously good.</p>
+          <div class="tags"><span>Signature</span><span>Fresh dough</span></div>
         </div>
       </div>
-      <div class="menu-card reveal">
-        <img class="menu-card-img" src="images/post-01-pizza-on-saj.jpg" alt="Pizza on saj">
-        <div class="menu-card-body">
-          <span class="menu-tag">New</span>
-          <h3>Pizza on Saj</h3>
-          <p>Pizza our way… on the saj! 🔥 Different taste, different dough — an experience you have to try.</p>
-          <span class="menu-price">Try the new one</span>
+      <div class="m-card">
+        <div class="ph"><span class="ph-badge">Classic</span><img src="images/tortilla.jpg" alt="Fresh saj with tortilla and pie fillings"></div>
+        <div class="bd">
+          <h3>Fresh Saj &amp; More</h3>
+          <p>Classic saj, pies and tortillas — folded to order and grilled right in front of you.</p>
+          <div class="tags"><span>Hand-stretched</span><span>Daily</span></div>
         </div>
       </div>
-      <div class="menu-card reveal">
-        <img class="menu-card-img" src="images/post-04-iced-latte.jpg" alt="Iced latte at Solo Sip'nSaj">
-        <div class="menu-card-body">
-          <span class="menu-tag">Coffee Bar</span>
-          <h3>Specialty Coffee</h3>
-          <p>Iced Latte & Spanish Latte — LL 200,000 each. Cappuccino, bigger sizes & flavors available at the branch.</p>
-          <span class="menu-price">From LL 200,000</span>
+      <div class="m-card">
+        <div class="ph"><span class="ph-badge">Fresh</span><img src="images/fresh-juice.jpg" alt="Freshly pressed fruit juice with no added sugar"></div>
+        <div class="bd">
+          <h3>Fresh Juices</h3>
+          <p>Pressed to order, 100% natural, no added sugar and no water — the Solo way.</p>
+          <div class="tags"><span>No sugar</span><span>100% natural</span></div>
         </div>
       </div>
-      <div class="menu-card reveal">
-        <img class="menu-card-img" src="images/post-03-fresh-juice.jpg" alt="Fresh natural juice">
-        <div class="menu-card-body">
-          <span class="menu-tag">Fresh</span>
-          <h3>Juices & Drinks</h3>
-          <p>100% natural, squeezed fresh in front of you. No added sugar, not a drop of water. Mango, mojitos & more.</p>
-          <span class="menu-price">Squeezed to order</span>
+      <div class="m-card">
+        <div class="ph"><span class="ph-badge">Cool</span><img src="images/fruit-cocktail.jpg" alt="Fresh mango and fruit cocktail drink"></div>
+        <div class="bd">
+          <h3>Coffee &amp; Cocktails</h3>
+          <p>Iced lattes, cold brews and seasonal fruit cocktails to cool you down in Verdun.</p>
+          <div class="tags"><span>Iced coffee</span><span>Fruit mixes</span></div>
         </div>
       </div>
-    </div>
-    <p class="menu-note reveal">Plus fresh <b>baguette</b>, breakfast wraps and cold iced coffee — ready from morning till night. <a href="https://wa.me/96176661089?text=Hi%20Solo%20Sip'nSaj!%20What's%20on%20the%20menu%20today%3F" target="_blank" rel="noopener">Ask for today’s offers on WhatsApp →</a></p>
-  </div>
-</section>
-
-<!-- ================= HIGHLIGHTS ================= -->
-<section id="highlights">
-  <div class="container">
-    <div class="sec-head center" style="text-align:center">
-      <span class="eyebrow" style="justify-content:center">Story Highlights</span>
-      <h2 class="sec-title">Life at the <em>counter</em></h2>
-      <p class="sec-sub" style="margin-inline:auto">A peek into our daily stories — from the first iced coffee of the day to summer mojitos.</p>
-    </div>
-    <div class="hl-row">
-      <div class="hl-item reveal"><a href="https://www.instagram.com/stories/highlights/17955854607177677/" target="_blank" rel="noopener"><div class="hl-ring"><img src="images/hl-01-iced-coffee.jpg" alt="Iced coffee highlight"></div><small>Iced Coffee</small></a></div>
-      <div class="hl-item reveal"><a href="https://www.instagram.com/stories/highlights/17970867333106283/" target="_blank" rel="noopener"><div class="hl-ring"><img src="images/hl-02-summer-vibes.jpg" alt="Summer vibes highlight"></div><small>Summer Vibes</small></a></div>
-      <div class="hl-item reveal"><a href="https://www.instagram.com/stories/highlights/18151541275483101/" target="_blank" rel="noopener"><div class="hl-ring"><img src="images/hl-03-fresh-juice.jpg" alt="Fresh juice highlight"></div><small>Fresh Juice 🥤</small></a></div>
-      <div class="hl-item reveal"><a href="https://www.instagram.com/stories/highlights/18071997581310474/" target="_blank" rel="noopener"><div class="hl-ring"><img src="images/hl-04-offers.jpg" alt="Offers highlight"></div><small>Offers 🔥</small></a></div>
-      <div class="hl-item reveal"><a href="https://www.instagram.com/stories/highlights/18014627324752394/" target="_blank" rel="noopener"><div class="hl-ring"><img src="images/hl-05-mojito-lovers.jpg" alt="Mojito lovers highlight"></div><small>Mojito Lovers 🍹</small></a></div>
     </div>
   </div>
 </section>
 
 <!-- ================= GALLERY ================= -->
-<section class="gallery-section" id="gallery">
+<section class="section" id="gallery">
   <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow">From the Grid</span>
-      <h2 class="sec-title">Fresh off our <em>Instagram</em></h2>
-      <p class="sec-sub">Real posts from <b>@solo.sipnsaj</b> — tap any photo to read the original caption.</p>
+    <div class="menu-head">
+      <div>
+        <span class="eyebrow">From our kitchen</span>
+        <h2 class="title">The Gallery</h2>
+        <p class="lead">Real plates, straight from our saj-bird to your feed.</p>
+      </div>
+      <a class="g-ig" href="https://www.instagram.com/solo.sipnsaj" target="_blank" rel="noopener">📸 @solo.sipnsaj →</a>
     </div>
-    <div class="gallery-grid" id="galleryGrid"><!-- injected by JS --></div>
+    <div class="gallery-grid">
+      <div class="g-item" data-cap="Saj Pizza — a Solo original"><img src="images/pizza.jpg" alt="Saj pizza"><span class="g-lbl">Saj Pizza</span></div>
+      <div class="g-item" data-cap="Fresh spaghetti plate"><img src="images/spaghetti.jpg" alt="Spaghetti"><span class="g-lbl">Pasta Night</span></div>
+      <div class="g-item" data-cap="Tortillas & pies, made daily"><img src="images/tortilla.jpg" alt="Tortilla and pie"><span class="g-lbl">Tortilla & Pie</span></div>
+      <div class="g-item" data-cap="Fresh mango fruit cocktail"><img src="images/fruit-cocktail.jpg" alt="Mango fruit cocktail"><span class="g-lbl">Mango Cocktail</span></div>
+      <div class="g-item" data-cap="Fresh juice, pressed to order"><img src="images/fresh-juice.jpg" alt="Fresh juice"><span class="g-lbl">Fresh Juice</span></div>
+    </div>
   </div>
 </section>
 
-<!-- ================= VISIT ================= -->
-<section class="visit-section" id="visit">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Visit Us</span>
-      <h2 class="sec-title">Your <em>Solo</em> stop in Verdun</h2>
-      <p class="sec-sub">Main street, facing Goodies Supermarket. Come as you are — we’re open every day from morning till night.</p>
+<!-- ================= LOCATION ================= -->
+<section class="section loc" id="location">
+  <div class="container loc-grid">
+    <div>
+      <span class="eyebrow">Visit us</span>
+      <h2 class="title">Find us in the heart of Verdun</h2>
+      <p class="lead">Right on the main street, facing Goodies Supermarket. Come for the saj, stay for the coffee.</p>
+      <div class="loc-list">
+        <div class="loc-item">
+          <span class="ic">📍</span>
+          <div><div class="t">Address</div><div class="d">Verdun Main Street — facing Goodies Supermarket, Beirut, Lebanon</div></div>
+        </div>
+        <div class="loc-item">
+          <span class="ic">📞</span>
+          <div><div class="t">Call / WhatsApp</div><div class="d"><a href="tel:+96176661089">+961 76 661 089</a> · <a href="tel:+96176661088">+961 76 661 088</a></div></div>
+        </div>
+        <div class="loc-item">
+          <span class="ic">🛵</span>
+          <div><div class="t">Delivery</div><div class="d">Order through <a href="https://www.totersapp.com" target="_blank" rel="noopener">Toters</a> or WhatsApp us directly</div></div>
+        </div>
+        <div class="loc-item">
+          <span class="ic">📸</span>
+          <div><div class="t">Follow along</div><div class="d"><a href="https://www.instagram.com/solo.sipnsaj" target="_blank" rel="noopener">@solo.sipnsaj</a> on Instagram</div></div>
+        </div>
+      </div>
     </div>
-    <div class="visit-grid">
-      <div class="visit-info reveal">
-        <div class="v-card">
-          <div class="v-ico">📍</div>
-          <div>
-            <h4>Address</h4>
-            <p>Verdun Main Street (opposite Goodies Supermarket)<br>Beirut, Lebanon</p>
-          </div>
-        </div>
-        <div class="v-card">
-          <div class="v-ico">🕖</div>
-          <div>
-            <h4>Opening Hours</h4>
-            <p>Open every day ☀️<br>7:00 AM – 9:00 PM</p>
-          </div>
-        </div>
-        <div class="v-card">
-          <div class="v-ico">📞</div>
-          <div>
-            <h4>Call & WhatsApp</h4>
-            <p><a href="tel:+96176661089">+961 76 661 089</a><br>Order directly — we’re one message away</p>
-          </div>
-        </div>
-        <div class="v-card">
-          <div class="v-ico">🛵</div>
-          <div>
-            <h4>Delivery</h4>
-            <p>Available on <a href="https://toters.app" target="_blank" rel="noopener">Toters</a> — order straight to your door</p>
-          </div>
-        </div>
-        <div class="v-ctas">
-          <a class="btn btn-primary" href="tel:+96176661089">📞 Call Now</a>
-          <a class="btn btn-ghost" href="https://wa.me/96176661089?text=Hi%20Solo%20Sip'nSaj!%20I'd%20like%20to%20order%20%E2%9C%A8" target="_blank" rel="noopener">💬 WhatsApp</a>
-          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Verdun+Main+Street+Beirut+Lebanon" target="_blank" rel="noopener">🗺️ Get Directions</a>
-          <a class="btn btn-ghost" href="https://www.instagram.com/solo.sipnsaj/" target="_blank" rel="noopener">📷 Instagram</a>
-        </div>
+    <div class="loc-card">
+      <h3>Opening Hours</h3>
+      <p class="sub">We're open every day of the week.</p>
+      <div class="hours">
+        <div class="h-row"><span>Monday — Friday</span><b>8:00 AM – 11:00 PM</b></div>
+        <div class="h-row"><span>Saturday</span><b>8:00 AM – 11:00 PM</b></div>
+        <div class="h-row"><span>Sunday</span><b>9:00 AM – 10:00 PM</b></div>
       </div>
-      <div class="map-frame reveal">
-        <iframe title="Solo Sip'nSaj — Verdun, Beirut map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Verdun%20Main%20Street%2C%20Beirut%2C%20Lebanon&z=15&output=embed"></iframe>
-      </div>
+      <a class="btn btn-primary" href="https://wa.me/96176661089" target="_blank" rel="noopener">💬 Order on WhatsApp</a>
     </div>
   </div>
 </section>
@@ -531,143 +467,70 @@
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="container">
-    <div class="foot-grid">
+    <div class="foot-inner">
       <div class="foot-brand">
-        <div class="brand-name serif">Solo <span style="color:var(--gold)">Sip'nSaj</span></div>
-        <p>Fresh Saj • Coffee • Drinks • Baguette.<br>Daily fresh dough | No oil, no sugar.<br>From Saj to Sip… it’s a Solo Trip. 💚</p>
+        <img src="images/logo.png" alt="Solo Sip'n Saj logo">
+        <div>
+          <div class="n">Solo Sip'n Saj</div>
+          <div class="foot-tag">From Saj to Sip… it's a Solo Trip</div>
+        </div>
       </div>
-      <div class="foot-col">
-        <h5>Explore</h5>
+      <div class="foot-links">
         <a href="#about">Our Story</a>
         <a href="#menu">Menu</a>
         <a href="#gallery">Gallery</a>
-        <a href="#visit">Visit Us</a>
-      </div>
-      <div class="foot-col">
-        <h5>Contact</h5>
-        <a href="tel:+96176661089">+961 76 661 089</a>
-        <a href="https://wa.me/96176661089" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://toters.app" target="_blank" rel="noopener">Order on Toters</a>
-        <a href="https://www.instagram.com/solo.sipnsaj/" target="_blank" rel="noopener">@solo.sipnsaj</a>
-      </div>
-      <div class="foot-col">
-        <h5>Hours</h5>
-        <a>Open every day</a>
-        <a>7:00 AM – 9:00 PM</a>
+        <a href="#location">Visit Us</a>
+        <a href="https://www.instagram.com/solo.sipnsaj" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
-    <div class="foot-bottom">
-      <span>© <span id="year"></span> Solo Sip’nSaj — Verdun, Beirut. All rights reserved.</span>
-      <span>Demo website built from the public Instagram profile @solo.sipnsaj. Not an official site.</span>
-    </div>
+    <div class="foot-copy">© <span id="year"></span> Solo Sip'n Saj · Verdun, Beirut. Fresh Saj • Coffee • Drinks • Baguette. Demo website — photos courtesy of @solo.sipnsaj.</div>
   </div>
 </footer>
 
 <!-- ================= LIGHTBOX ================= -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
-  <button class="lb-close" onclick="closeLightbox()" aria-label="Close">✕</button>
-  <div class="lb-card">
-    <img class="lb-img" id="lbImg" src="" alt="">
-    <div class="lb-side">
-      <h3 id="lbTitle"></h3>
-      <p class="lb-cap" id="lbCap"></p>
-      <div class="lb-meta" id="lbMeta"></div>
-      <a class="lb-ig" id="lbIg" href="#" target="_blank" rel="noopener">📷 View on Instagram</a>
-    </div>
-  </div>
+<div class="lb" id="lb">
+  <button class="close" id="lbClose" aria-label="Close">×</button>
+  <img id="lbImg" src="" alt="">
+  <div class="cap" id="lbCap"></div>
 </div>
 
 <script>
-/* ---------------- GALLERY DATA (scraped from @solo.sipnsaj) ---------------- */
-const POSTS = [
-  { img:"post-01-pizza-on-saj.jpg", shortCode:"DVq3vwEis6d", title:"Pizza on Saj 🔥", date:"Mar 9, 2026", likes:"",
-    short:"الجديد عنا… Pizza بس ع طريقتنا، عالصاج!",
-    cap:"الجديد عنا 🍕 Pizza بس ع طريقتنا… عالصاج! 🔥\nطعم غير، عجينة غير، وتجربة لازم تجربوها 😋\n\n📍 ڤردان – الشارع الرئيسي مقابل سوبر ماركت Goodies\n📞 76 661 089\n🛵 فيكن تطلبوا كمان عبر تطبيق Toters" },
-  { img:"post-02-saj-different.jpg", shortCode:"DVmCA_QCsGU", title:"Saj Unlike Any Saj 😋", date:"Mar 7, 2026", likes:"",
-    short:"صاجنا غير أي صاج",
-    cap:"صاجنا غير أي صاج 😋🔥\nوخبزتنا ما موجودة غير عنا 🫓✨\nوطعمتنا طايرة وبتحكي عنا 🤤❤️\n\n📍 Verdun Main Street – Facing Goodies Supermarket\n📲 فيكن كمان تطلبوا عبر تطبيق Toters\n📞 76661089" },
-  { img:"post-03-fresh-juice.jpg", shortCode:"Db-Df89IU09", title:"Fresh Juice, Squeezed to Order 🥤", date:"Aug 12, 2026", likes:"",
-    short:"طبيعي 100%، معصور فوراً قدامك",
-    cap:"عبالك كاسّة عصير تردّ الروح؟\nطبيعي 100% معصور فوراً قدامك، لا سكر زيادة ولا نقطة مي!!\n\nFrom saj to sip… it’s a solo trip\nمروق لعنّا على فردان أو ابعتلنا مسج ع الواتساب واطلب عصيرك بارد\n\n📲 WhatsApp / Call: 76661088\n📍 Verdun – Main Street" },
-  { img:"post-04-iced-latte.jpg", shortCode:"Db7XNXRBudc", title:"Coffee & Saj — the Solo Combo ☕", date:"Aug 11, 2026", likes:"",
-    short:"Iced Latte at the Verdun branch",
-    cap:"When you ask for coffee and the Gym Boy answers with “Chest”! 😂💪☕\nZero concentration, 100% muscle mindset!\n\n“From saj to sip… it’s a solo trip” ✨\n👉 Pair your coffee with our fresh, 0% oil & sugar Saj:\n\n📲 WhatsApp / Call: 76661088\n📍 Verdun – Main Street" },
-  { img:"post-05-healthy-saj.jpg", shortCode:"Db5Le1AqZfw", title:"Hungry but Healthy? 🥙", date:"Aug 11, 2026", likes:"29",
-    short:"0% oil & 0% sugar — 100% taste, zero guilt",
-    cap:"Hungry but keeping it healthy?\nOur Saj dough is made fresh daily with 0% oil and 0% sugar — 100% taste, zero guilt!\n\nFrom saj to sip… it’s a solo trip\n👉 Order directly now via WhatsApp / Call: 76661088\n\n📍 Verdun – Main Street" },
-  { img:"post-06-dough-to-wrap.jpg", shortCode:"Da7ZNpiqOpJ", title:"From Dough to Wrap 💚", date:"Jul 18, 2026", likes:"21",
-    short:"من أول فردة عجين… لآخر لفّة",
-    cap:"من أول فردة عجين… لآخر لفّة 😋\nكل صاج منعمله طازة قدّامكن وبإيدين شباب Solo 💚🔥\n\n📍Verdun Main Street\n📞 76661089\n\nFrom saj to sip … it’s a solo trip." },
-  { img:"post-07-signboard-menu.jpg", shortCode:"Da17ogOKWO-", title:"Your Solo Stop in Verdun ☕", date:"Jul 16, 2026", likes:"21",
-    short:"Iced Latte & Spanish Latte — on the board",
-    cap:"From saj to sip… it’s a Solo Trip. ☕🫓🥤\nPass by Solo Sip’nSaj in Verdun and enjoy your favorite coffee, fresh drinks, and saj.\n\n📍 Verdun Main Street, opposite Goodies\n📞 76 66 10 89\n\nFrom saj to sip …it’s a solo trip." },
-  { img:"post-08-grill-to-bag.jpg", shortCode:"DazVxVfqIYj", title:"Grill to the Bag 🔥", date:"Jul 15, 2026", likes:"16",
-    short:"Fresh, hot, and sealed with Solo",
-    cap:"From the grill to the bag — fresh, hot, and sealed with Solo. 🔥🥙\nOrder yours today!\n\nFrom saj to sip…it’s a Solo trip" },
-  { img:"post-09-morning-saj.jpg", shortCode:"DZHZ6OLq3oZ", title:"Morning Saj 🤍", date:"Jun 3, 2026", likes:"24",
-    short:"ريحة الصاج بلّشت من الصبح",
-    cap:"ريحة الصاج بلّشت من الصبح… 🤍\nخبزة طازة، خفيفة، ولذيذة\nبلا زيت وبلا سكر\nإذا عبالك فطور بيشهي\nSolo Sip’nsaj جاهزلكن\n\n📞 Order now: 76 66 10 89" },
-  { img:"post-10-eid-greeting.jpg", shortCode:"DY1vZg4KTsO", title:"Eid Mubarak 🎉", date:"May 27, 2026", likes:"",
-    short:"عيد أضحى مبارك من عيلة Solo Sip’nsaj",
-    cap:"عيد أضحى مبارك من عيلة Solo Sip’nsaj 🎉\nمنتمنالكن عيد مليان خير، بركة، ولمّة حلوة مع أحبابكن.\nكل عام وإنتو بخير 💚\n\nSolo Sip’nsaj – 📍Verdun\nFrom saj to sip… it’s a Solo trip" },
-  { img:"post-11-mango-drink.jpg", shortCode:"DYofs1vqRQu", title:"Mango Mood 🥭", date:"May 2026", likes:"",
-    short:"طعمتها أخت مانغا",
-    cap:"طعمتها أخت مانغا 🥭😅\n\n📍Verdun Beirut\n📞 76 66 10 88\n\nFrom Saj to Sip its’s…a SOLO trip" },
-  { img:"post-12-hours-poster.jpg", shortCode:"DYjPkPIK1dR", title:"Open Every Day ☀️", date:"May 2026", likes:"",
-    short:"Fresh saj, coffee & baguette — 7 AM to 9 PM",
-    cap:"We’re open everyday ☀️\nFrom saj to coffee… and everything in between.\nFresh saj, hot coffee, cold drinks & baguette — ready from morning till night.\n\n📍Solo Sip’nsaj – Verdun\n🕖 7 AM – 9 PM\n📲 Order / Menu: link in bio" }
-];
-const IG = "https://www.instagram.com/solo.sipnsaj/";
+  // Nav shadow
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), {passive:true});
 
-/* ---------------- BUILD GALLERY ---------------- */
-const grid = document.getElementById("galleryGrid");
-POSTS.forEach((p, i) => {
-  const card = document.createElement("div");
-  card.className = "g-card reveal";
-  card.innerHTML = `
-    <img src="images/${p.img}" alt="${p.title}" loading="lazy">
-    <span class="ig-ico">📷</span>
-    <div class="overlay">
-      <p>${p.short}</p>
-      <small>${p.date}${p.likes ? " • ❤️ " + p.likes : ""}</small>
-    </div>`;
-  card.addEventListener("click", () => openLightbox(i));
-  grid.appendChild(card);
-});
-
-/* ---------------- LIGHTBOX ---------------- */
-function openLightbox(i) {
-  const p = POSTS[i];
-  document.getElementById("lbImg").src = "images/" + p.img;
-  document.getElementById("lbImg").alt = p.title;
-  document.getElementById("lbTitle").textContent = p.title;
-  document.getElementById("lbCap").textContent = p.cap;
-  document.getElementById("lbMeta").textContent = p.date + (p.likes ? " • " + p.likes + " likes" : "");
-  document.getElementById("lbIg").href = IG + "p/" + p.shortCode;
-  document.getElementById("lightbox").classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-function closeLightbox() {
-  document.getElementById("lightbox").classList.remove("open");
-  document.body.style.overflow = "";
-}
-document.getElementById("lightbox").addEventListener("click", e => {
-  if (e.target.id === "lightbox") closeLightbox();
-});
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeLightbox();
-});
-
-/* ---------------- REVEAL ON SCROLL ---------------- */
-const io = new IntersectionObserver(entries => {
-  entries.forEach(en => {
-    if (en.isIntersecting) { en.target.classList.add("visible"); io.unobserve(en.target); }
+  // Mobile menu
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('menu');
+  burger.addEventListener('click', () => {
+    menu.classList.toggle('open');
+    const spans = burger.querySelectorAll('span');
+    spans[0].style.transform = menu.classList.contains('open') ? 'rotate(45deg) translate(5px,5px)' : '';
+    spans[1].style.opacity = menu.classList.contains('open') ? '0' : '1';
+    spans[2].style.transform = menu.classList.contains('open') ? 'rotate(-45deg) translate(5px,-5px)' : '';
   });
-}, { threshold: 0.12 });
-document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
 
-/* ---------------- YEAR ---------------- */
-document.getElementById("year").textContent = new Date().getFullYear();
+  // Marquee duplication for seamless loop
+  const track = document.getElementById('marquee');
+  track.innerHTML += track.innerHTML;
+
+  // Lightbox
+  const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
+  document.querySelectorAll('.g-item').forEach(item => {
+    item.addEventListener('click', () => {
+      lbImg.src = item.querySelector('img').src;
+      lbCap.textContent = item.dataset.cap;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+  function closeLb(){ lb.classList.remove('open'); document.body.style.overflow = ''; }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
